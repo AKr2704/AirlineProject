@@ -264,6 +264,11 @@ public class BookTicket extends javax.swing.JInternalFrame {
         });
 
         jButton4.setText("Cancel");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Book");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -545,6 +550,7 @@ public class BookTicket extends javax.swing.JInternalFrame {
             
             pre.executeUpdate();
             JOptionPane.showMessageDialog(null, "Ticket Booked Successfully");
+            this.setVisible(false);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(BookTicket.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -552,6 +558,11 @@ public class BookTicket extends javax.swing.JInternalFrame {
         }
             
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

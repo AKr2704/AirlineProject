@@ -293,6 +293,11 @@ public class AddCustomer extends javax.swing.JInternalFrame {
 
         jButton2.setFont(new java.awt.Font("Leelawadee", 1, 24)); // NOI18N
         jButton2.setText("Delete");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -390,12 +395,18 @@ public class AddCustomer extends javax.swing.JInternalFrame {
             pre.setString(9, Date);
             pre.executeUpdate();
             JOptionPane.showMessageDialog(null, "Customer Added Successfully");
+            this.setVisible(false);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(AddCustomer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(AddCustomer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
